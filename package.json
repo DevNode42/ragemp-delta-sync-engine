@@ -1,0 +1,26 @@
+{
+  "name": "ragemp-delta-sync-engine",
+  "version": "1.0.0",
+  "description": "Binary delta-compression protocol, fixed-tickrate world snapshot ring buffer, and client-side prediction with rollback reconciliation",
+  "main": "src/protocol/delta-codec.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "bench": "npx esbuild src/benchmarks/bandwidth-and-rollback.ts --bundle --platform=node --format=cjs | node --expose-gc"
+  },
+  "keywords": [
+    "ragemp",
+    "altv",
+    "netcode",
+    "delta-compression",
+    "rollback",
+    "tickrate",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
